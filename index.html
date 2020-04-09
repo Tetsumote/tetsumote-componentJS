@@ -6,13 +6,14 @@
     <title>TimeLine component</title>
     <link rel="stylesheet" href="https://use.typekit.net/yxl3upj.css">
     <link rel="stylesheet" href="./stylesheets/style.css"> 
-    <script type="module">
+    <!-- <script type="module">
 
         /// importing the first custom element
         import FontFainder from './JS/script.js';
   
         customElements.define('font-component', FontFainder);
-      </script>   
+      </script>    -->
+     
 </head>
 <body>
     <div class="wrapper">
@@ -33,7 +34,7 @@
                         <h4 class="timeline-header">1501:</h4>
                         <p class="timeline-expanation">The first italic font surfaces</p>
                     </li>
-                    <li>
+                    <li class="font-display" data-font="1">
                         <h4 class="timeline-header">1798:</h4>
                         <p class="timeline-expanation">The first version of Bodoni is released</p>
                     </li>
@@ -45,39 +46,39 @@
                         <h4 class="timeline-header">1885:</h4>
                         <p class="timeline-expanation">The quick brown fox jumps over the lazy dog</p>
                     </li>
-                    <li>
+                    <li class="font-display" data-font="2">
                         <h4 class="timeline-header">1926:</h4>
                         <p class="timeline-expanation">designed by Eric Gill</p>
                     </li>
-                    <li>
+                    <li class="font-display" data-font="3">
                         <h4 class="timeline-header">1927:</h4>
                         <p class="timeline-expanation">Creation of Futura begins</p>
                     </li>
-                    <li>
+                    <li class="font-display" data-font="4">
                         <h4 class="timeline-header">1957:</h4>
                         <p class="timeline-expanation">Helvetica is born</p>
                     </li>
-                    <li>
+                    <li class="font-display" data-font="5">
                         <h4 class="timeline-header">1994:</h4>
                         <p class="timeline-expanation">Comic Sans is designed for Microsoft</p>
                     </li>
-                    <li>
+                    <li class="font-display" data-font="6">
                         <h4 class="timeline-header">1994:</h4>
                         <p class="timeline-expanation">Playfair Display is released</p>
                     </li>
-                    <li>
+                    <li class="font-display" data-font="7">
                         <h4 class="timeline-header">2011:</h4>
                         <p class="timeline-expanation">Roboto is added to Google Fonts</p>
                     </li>
-                    <li>
+                    <li class="font-display" data-font="8">
                         <h4 class="timeline-header">2011:</h4>
                         <p class="timeline-expanation">Google commissions the creation of Open Sans</p>
                     </li>
-                    <li>
+                    <li class="font-display" data-font="9">
                         <h4 class="timeline-header">1927:</h4>
                         <p class="timeline-expanation">Google releases an open source version of EB Garamond</p>
                     </li>
-                    <li>
+                    <li class="font-display" data-font="10">
                         <h4 class="timeline-header">2014:</h4>
                         <p class="timeline-expanation">Josefin Sans is released</p>
                     </li>
@@ -107,6 +108,6 @@
         </div>
 
     </div>
-
+    <script src="./JS/fontScript.js"></script>
 </body>
 </html>

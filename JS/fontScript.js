@@ -3,7 +3,9 @@ class FontClass{
         this.state = {
             fonts:[],
         };
+        this.$fontTest = document.querySelectorAll('.font-display')
         this.getFontList();
+        this.font();
     }
 
     getFontList(){
@@ -14,15 +16,40 @@ class FontClass{
         .then(jsonData => {
             this.state.fonts = jsonData;
             //this.generateTemplate(jsonData);
-            console.log(this.state.fonts[1])
-            return console.log(this.state.fonts,'state')
+            return console.log('state')
 
         })
     }
+    generateTemplate(jsonData){
+        let fonts = jsonData.map((data,index)=>{
+            return this.getFont(data,index);
+        });
 
+        let font = document.createElement('div');
+        font.innerHTML = fonts.join('');
+        this.appendHTMLToShadowDOM(font);
+    }
+
+    getFont(data,index){
+        let font = `
+        <p>${data.name} ${data.type}</p>
+        `
+        return font;
+
+    }
+    font(){
+        this.$fontTest.forEach(function(value){
+            value.addEventListener('click',function(){
+                
+                console.log(this.dataset.font)
+            })
+        })
+    }
 }
 
 let fontFinder;
-window.addEventListener('onload',() => {
-    fontFinder = new FontClass;
+window.addEventListener('load',() => {
+    fontFinder = new FontClass();
 })
+
+
