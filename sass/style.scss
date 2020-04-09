@@ -1,0 +1,150 @@
+@import "compass/reset";
+@import "compass/typography/vertical_rhythm";
+$base-font-size: 16px;
+$base-line-height: 24px;
+$round-to-nearest-half-line: true;
+//$rhythm-unit: "rem";
+
+@include establish-baseline;
+
+
+h1{
+    @include adjust-font-size-to(64px);
+    margin-bottom: rhythm(1, 188px);
+    margin-top: rhythm(1, 128px);
+}
+h2{
+    @include adjust-font-size-to(24px);
+    @include rhythm(1);
+}
+h3{
+    @include adjust-font-size-to(20px);
+}
+p {
+    @include adjust-font-size-to(16px);
+   @include leader; 
+   @include trailer; 
+}
+
+body,html{
+    width:100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper{
+    display: flex; 
+    justify-content: center;
+    flex-direction: row;
+    min-height: 100%; 
+
+    .left{
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100%;
+        background:white;
+        padding: 3rem;
+        max-width: 50%;
+        @include debug-vertical-alignment;
+
+
+
+        ul{
+            li:nth-child(even){
+                width:50%;
+                text-align: right;
+                position: relative;
+                border-right: 1px solid black;
+                &:after{
+                    content: '';
+                    width: 22px;
+                    height: 1px;
+                    background: black;
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                }
+                h4.timeline-header{
+                    font-family: operetta-12, serif;
+                    font-weight: 600;
+                    font-style: normal;
+                    padding-right: 2rem;
+                }
+                p.timeline-expanation{
+                    font-family: operetta-12, serif;
+                    font-weight: 200; 
+                    font-style: normal;
+                    margin-top: rhythm(1, 64px);
+                    margin-bottom: 0;
+                    padding-right: 2rem;
+                }
+
+            }
+            li:nth-child(odd){
+                margin-left:50%;
+                padding-left: 2rem;
+                border-left: 1px solid black;
+                position: relative;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 22px;
+                    height: 1px;
+                    background: black;
+                }
+                h4.timeline-header{
+                    font-family: operetta-12, serif;
+                    font-weight: 600;
+                    font-style: normal;
+                }
+                p.timeline-expanation{
+                    font-family: operetta-12, serif;
+                    font-weight: 200; 
+                    font-style: normal;
+                    margin-top: rhythm(1, 64px);
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        h3{
+            font-family: operetta-12, serif;
+            font-weight: 200; 
+            font-style: normal;
+            text-transform: uppercase;
+            color:#9b9b9b;
+            margin-top: rhythm(1, 20px);
+        }
+        h1{
+            font-family: operetta-12, serif;
+            font-weight: 800;
+            font-style: normal;
+            text-align: center;
+        }
+        p.sub-header{
+            text-align: center;
+            font-family: operetta-12, serif;
+            font-weight: 400;
+            font-style: normal;
+            //@include rhythm(1);
+            width: 80%;
+
+        }
+    }
+    .right{
+    display: flex;
+    flex-grow:1;
+    min-height: 100%;
+    background: #bdbdbd;
+    @include debug-vertical-alignment;
+    }
+
+
+
+}

@@ -1,0 +1,82 @@
+[
+    {
+        "name":"Bodoni",
+        "type":"serif",
+        "content":"Bodoni is a series of serif typefaces first designed by Giambattista Bodoni (1740–1813) in 1798. Bodoni followed the ideas of John Baskerville, as found in the printing type Baskerville: increased stroke contrast and a more vertical, slightly condensed, upper case; but took them to a more extreme conclusion. Bodoni had a long career and his designs evolved and varied, ending with a typeface of narrower underlying structure with flat, unbracketed serifs, extreme contrast between thick and thin strokes, and an overall geometric construction.",
+        "year_released":"1798",
+        "disigned_by":"Giambattista Bodoni",
+        "inspired_by":"Baskerville"
+    },
+    {
+        "name":"Gill Sans",
+        "type":"SANS-SERIF",
+        "content":"Gill Sans is a sans-serif typeface designed by Eric Gill. The original design appeared in 1926, when Douglas Cleverdon opened a bookshop in Bristol, where Gill painted the fascia over the window in sans-serif capitals that would later be known as Gill Sans. Gill further developed it into a complete font family after Stanley Morison of Monotype commissioned the development of Gill Sans to compete with the Erbar, Futura and Kabel families. The popularity of Gill Sans influenced many other typefaces, and helped to define the genre of the humanist sans-serif.",
+        "year_released":"1928",
+        "disigned_by":"Eric Gill",
+        "inspired_by":"Johnston"
+    },
+    {
+        "name":"Futura",
+        "type":"SANS-SERIF",
+        "content":"Futura is a geometric sans-serif typeface designed by Paul Renner. It was designed as a contribution on the New Frankfurt-project. It is based on geometric shapes that became representative of visual elements of the Bauhaus design style of 1919–33. Futura was commercially released in 1936. The lowercase has tall ascenders, which rise above the cap line. The uppercase characters present proportions similar to those of classical Roman capitals.",
+        "year_released":"1927",
+        "disigned_by":"Paul Renner",
+        "inspired_by":"something"
+    },
+    {
+        "name":"Helvetica",
+        "type":"SANS-SERIF",
+        "content":"It is a neo-grotesque or realist design, one influenced by the famous 19th century typeface Akzidenz-Grotesk and other German and Swiss designs. Known as the invisible typeface due to the extent of its visibility and influence, it is among of the most popular typefaces of the 20th century, its use became a hallmark of the International Typographic Style that emerged from the work of Swiss designers in the 1950s and 60s.",
+        "year_released":"1957",
+        "disigned_by":"Max Miedinger",
+        "inspired_by":"Akzidenz-Grotesk"
+    },
+    {
+        "name":"Comic Sans MS",
+        "type":"SANS-SERIF",
+        "content":"Comic Sans is a sans-serif casual script typeface designed by Vincent Connare and released in 1994 by Microsoft Corporation. It is classified as a casual, non-connecting script for use in informal documents inspired by comic book lettering. The typeface's widespread use, often in situations for which it was not intended, has been criticized.",
+        "year_released":"1994",
+        "disigned_by":"Vincent Connare",
+        "inspired_by":"Watchmen Comic"
+    },
+    {
+        "name":"Playfair Display",
+        "type":"SERIF",
+        "content":"Playfair is a transitional design. From the time of enlightenment in the late 18th century, the broad nib quills were replaced by pointed steel pens. This influenced typographical letterforms to become increasingly detached from the written ones. Developments in printing technology, ink, and paper making, made it possible to print letterforms of high contrast and delicate hairlines.",
+        "year_released":"2013",
+        "disigned_by":"Claus Eggers Sørensen",
+        "inspired_by":"Baskerville"
+    },
+    {
+        "name":"Roboto",
+        "type":"SANS-SERIF",
+        "content":"Roboto has a dual nature. It has a mechanical skeleton and the forms are largely geometric. At the same time, the font features friendly and open curves. While some grotesks distort their letterforms to force a rigid rhythm, Roboto doesn’t compromise, allowing letters to be settle in to their natural width. This makes for a more natural reading rhythm more commonly found in humanist and serif types. The family includes Thin, Light, Regular, Medium, Bold and Black weights with matching oblique styles.",
+        "year_released":"2011",
+        "disigned_by":"Christian Robertson",
+        "inspired_by":"Ubuntu-Title"
+    },
+    {
+        "name":"Open Sans",
+        "type":"SANS-SERIF",
+        "content":"Open Sans is a sans-serif typeface commissioned by Google. According to Google, it was developed with an upright stress, open forms and a neutral, yet friendly appearance and is optimized for legibility across print, web, and mobile interfaces. Its design is almost identical to that of Droid Sans, with the exception of wider characters and the inclusion of italic variants. Open Sans is used in some of Google's print and web advertisements.",
+        "year_released":"2011",
+        "disigned_by":"Steve Matteson",
+        "inspired_by":"Droid Sans"
+    },
+    {
+        "name":"EB Garamond",
+        "type":"SERIF",
+        "content":"Garamont’s fonts have set a milestone, on which font designers have been recurring ever since. EB Garamond is an open source project to create a revival of Claude Garamont’s famous humanist typeface from the mid-16th century. Its design reproduces the original design by Claude Garamont: The source for the letterforms is a scan of a specimen known as the “Berner specimen”, which, composed in 1592 by Conrad Berner, shows Garamont’s roman and Granjon’s italic fonts at different sizes.",
+        "year_released":"2012",
+        "disigned_by":"Georg Duffner",
+        "inspired_by":"Garamond"
+    },
+    {
+        "name":"Josefin Sans",
+        "type":"SANS-SERIF",
+        "content":"The idea for creating this typeface was to make it geometric, elegant and kind of vintage, especially for titling. It is inspired by Rudolf Koch's Kabel (1927), Rudolf Wolf's Memphis (1930), Paul Renner's Futura (1927). Orozco's idea was to draw something with good style, that reflects Swedish design and their passion for a good lifestyle, and by default all other Scandinavian styles. The x-height is half way from baseline to caps height, unlike any other modern typeface. It also has a sister family, Josefin Slab.",
+        "year_released":"2014",
+        "disigned_by":"Santiago Orozco",
+        "inspired_by":"Kabel & Futura"
+    }
+]
