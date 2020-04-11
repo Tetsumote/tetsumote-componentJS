@@ -48,7 +48,7 @@ body,html{
         background:white;
         padding: 3rem;
         max-width: 50%;
-        @include debug-vertical-alignment;
+        //@include debug-vertical-alignment;
 
 
 
@@ -137,12 +137,56 @@ body,html{
 
         }
     }
-    .right{
+    .right{ 
     display: flex;
     flex-grow:1;
     min-height: 100%;
     background: #bdbdbd;
-    @include debug-vertical-alignment;
+    //@include debug-vertical-alignment;
+    .right-lead{
+        text-align: center;
+        font-family: operetta-12, serif;
+        font-weight: 400;
+        font-style: normal;       
+    }
+        .rightSection1{
+            width:100%;
+            .searchForm{
+                display: flex;
+                width: calc(50% - 150px);
+                position: fixed;
+                margin: 2rem;
+                z-index: 1000;
+                .searchField{
+                    flex-grow: 1;
+                    padding: .5rem;
+                    border: none;
+                    border-bottom: 1px solid black;
+                    background: transparent;
+                    color:black;
+                    &::placeholder {
+                        color: black;
+                      }
+                    &:focus {
+                        outline: transparent;
+                    }
+                }
+                .searchButton{
+                    width:150px;
+                    background:#9b9b9b;
+                    color:white;
+                    border:none;
+                }
+            }
+        }
+    }
+    .rightMain{
+        position: fixed;
+        padding: 0 3rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
 
