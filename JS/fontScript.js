@@ -30,15 +30,15 @@ class FontClass{
     createTemplate(data){
         return `
         <link href="https://fonts.googleapis.com/css2?family=${data.google_font}&display=swap" rel="stylesheet">
-        <div class="right-wrapper_main" style="font-family:${data.font_style}">                
+        <div class="right-wrapper_main animated fadeInRight" style="font-family:${data.font_style}">                
             <h1 class="right-header">${data.name}</h1>
             <h4 class="right-subheader">${data.type}</h4>
             <p class="right-content">${data.content}</p>
         </div>
-        <div class="right-wraper_detail" style="font-family:${data.font_style}">                
-            <div class="right-detail">${data.year_released}</div>
-            <div class="right-detail">${data.disigned_by}</div>
-            <div class="right-detail">${data.inspired_by}</div>
+        <div class="right-wraper_detail animated fadeInRight">                
+            <div class="right-detail"><span class="right-detail-intro">YEAR RELEASED</span> ${data.year_released}</div>
+            <div class="right-detail"><span class="right-detail-intro">DESIGNED BY</span> ${data.disigned_by}</div>
+            <div class="right-detail"><span class="right-detail-intro">INSPIRED BY</span> ${data.inspired_by}</div>
         </div>
         `
 
@@ -49,10 +49,12 @@ class FontClass{
         const testdata = this.state;
 
         this.$fontTest.forEach(function(value){
+
             value.addEventListener('click',function(){
                 let test = document.querySelector('.rightMain');
                 test.innerHTML = createTemplate(testdata.fonts[this.dataset.font - 1])
             })
+
         })
     }
     checkForm(){
@@ -60,14 +62,22 @@ class FontClass{
         var testdata = this.state;
 
         this.$formButton.addEventListener('click',function(){
+
             let inputSearch = document.querySelector('.searchField');
-            
+            let errorMsg = document.querySelector('.msg-error')
+            var match = false;
+
             testdata.fonts.map(value => {
                 if(value.name === inputSearch.value.capitalize()){
                     let test = document.querySelector('.rightMain');
                     test.innerHTML = createTemplate(value)
+                    inputSearch.value = ''
+                    match = true
+                    errorMsg.innerHTML = " "
                 }else{
-                    console.log('not match')
+                    if(match === false){
+                        errorMsg.innerHTML = "Query doesn't match our data"
+                    }
                 }
                
             }

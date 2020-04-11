@@ -7,6 +7,98 @@ $round-to-nearest-half-line: true;
 
 @include establish-baseline;
 
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  .animated.delay-1s {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+  
+  .animated.delay-2s {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  
+  .animated.delay-3s {
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+  }
+  
+  .animated.delay-4s {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+  }
+  
+  .animated.delay-5s {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+  }
+  
+  .animated.fast {
+    -webkit-animation-duration: 800ms;
+    animation-duration: 800ms;
+  }
+  
+  .animated.faster {
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
+  }
+  
+  .animated.slow {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+  }
+  
+  .animated.slower {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+  }
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+  
+  .fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+  }
+  .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+
+.bold{
+    font-weight: 600; 
+}
+.msg-error{
+    margin-top: 5rem;
+    margin-left: 2.5rem;
+    position: fixed;
+    font-weight: 100;
+}
 
 h1{
     @include adjust-font-size-to(64px);
@@ -161,6 +253,8 @@ body,html{
                     flex-grow: 1;
                     padding: .5rem;
                     border: none;
+                    font-size: 1.2rem;
+                    font-weight: 100;
                     border-bottom: 1px solid black;
                     background: transparent;
                     color:black;
@@ -187,6 +281,24 @@ body,html{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        .right-subheader{
+            font-size: 1.6rem;
+        }
+        .right-wraper_detail{
+            font-family: operetta-12, serif;
+            font-weight: 400;
+            display: flex;
+            justify-content: space-between;
+            margin-top:3rem;
+            .right-detail{
+                text-align: center;
+                &-intro{
+                    font-weight: 600;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
     }
 
 
