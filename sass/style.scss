@@ -80,8 +80,12 @@ html {
     }
 
     ul.timeline {
+      width: 100%;
       li:nth-child(even) {
         width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
         text-align: right;
         position: relative;
         border-right: 1px solid black;
@@ -115,6 +119,7 @@ html {
           font-family: operetta-12, serif;
           font-weight: 600;
           font-style: normal;
+          max-width:200px;
           padding-right: 2rem;
           transition: padding-right .5s ease-in-out;
         }
@@ -122,6 +127,7 @@ html {
         p.timeline-expanation {
           font-family: operetta-12, serif;
           font-weight: 200;
+          max-width:200px;
           font-style: normal;
           margin-top: rhythm(1, 64px);
           margin-bottom: 0;
@@ -134,13 +140,15 @@ html {
       li:nth-child(odd) {
         margin-left: 50%;
         padding-left: 2rem;
+        display: flex;
+        flex-direction: column;
         border-left: 1px solid black;
         position: relative;
         transition: padding-left .5s ease-in-out;
 
         &:hover{
           padding-left: 3rem;
-          &:after{
+          &:before{
             width:33px;
           }
 
@@ -166,6 +174,7 @@ html {
           font-family: operetta-12, serif;
           font-weight: 600;
           font-style: normal;
+          width: 200px;
         }
 
         p.timeline-expanation {
@@ -174,6 +183,7 @@ html {
           font-style: normal;
           margin-top: rhythm(1, 64px);
           margin-bottom: 0;
+          width: 200px;
         }
       }
     }

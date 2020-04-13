@@ -28,9 +28,6 @@ class FontClass{
         })
         .then(jsonData => {
             this.state.fonts = jsonData;
-            //this.generateTemplate(jsonData);
-            return console.log('state')
-
         })
     }
 
@@ -47,9 +44,6 @@ class FontClass{
         })
     }
 
-    testFunc(){
-        console.log('test from testFunc')
-    }
     createTemplate(data){
         return `
         <link href="https://fonts.googleapis.com/css2?family=${data.google_font}&display=swap" rel="stylesheet">
