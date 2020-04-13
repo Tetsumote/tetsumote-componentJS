@@ -9,6 +9,10 @@ $round-to-nearest-half-line: true;
 
 @include establish-baseline;
 
+.animateElement{
+  opacity: 0;
+}
+
 .bold {
   font-weight: 600;
 }
@@ -64,7 +68,7 @@ html {
     background: $white;
     padding: 3rem;
     max-width: 50%;
-    @include debug-vertical-alignment;
+    //@include debug-vertical-alignment;
 
     &_subHeader {
       text-align: center;
@@ -82,6 +86,19 @@ html {
         position: relative;
         border-right: 1px solid black;
 
+        &:hover{
+          &:after{
+            width:33px;
+          }
+
+          h4.timeline-header {
+            padding-right: 3rem;
+          }
+          p.timeline-expanation {
+            padding-right: 3rem;
+          }        
+        }
+
         &:after {
           content: '';
           width: 22px;
@@ -91,6 +108,7 @@ html {
           position: absolute;
           right: 0;
           top: 50%;
+          transition: width .5s ease-in-out;
         }
 
         h4.timeline-header {
@@ -98,6 +116,7 @@ html {
           font-weight: 600;
           font-style: normal;
           padding-right: 2rem;
+          transition: padding-right .5s ease-in-out;
         }
 
         p.timeline-expanation {
@@ -107,6 +126,7 @@ html {
           margin-top: rhythm(1, 64px);
           margin-bottom: 0;
           padding-right: 2rem;
+          transition: padding-right .5s ease-in-out;
         }
 
       }
@@ -116,7 +136,21 @@ html {
         padding-left: 2rem;
         border-left: 1px solid black;
         position: relative;
+        transition: padding-left .5s ease-in-out;
 
+        &:hover{
+          padding-left: 3rem;
+          &:after{
+            width:33px;
+          }
+
+          h4.timeline-header {
+            padding-right: 3rem;
+          }
+          p.timeline-expanation {
+            padding-right: 3rem;
+          }        
+        }
         &:before {
           content: '';
           position: absolute;
@@ -125,6 +159,7 @@ html {
           width: 22px;
           height: 1px;
           background: black;
+          transition: width .5s ease-in-out;
         }
 
         h4.timeline-header {

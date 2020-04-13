@@ -2,14 +2,23 @@ class FontClass{
     constructor(){
         this.state = {
             fonts:[],
+            config:{
+                root:null,
+                rootMargin:"0px",
+                threshold: 0.9
+            }
         };
+        this.$animateEl = document.querySelectorAll('.animateElement')
         this.$fontTest = document.querySelectorAll('.font-display')
         this.$placeholder = document.querySelector('.right-sectionMain')
         this.$formButton = document.querySelector('.right-section_formButton')
         this.getFontList();
         this.font();
         this.checkForm();
+        this.trackFonts();
     }
+
+
 
     getFontList(){
  
@@ -24,6 +33,20 @@ class FontClass{
 
         })
     }
+
+    trackFonts(){
+        let observer = new IntersectionObserver(this.onchange,this.state.config);
+        this.$animateEl.forEach(el => observer.observe(el))
+    }
+    onchange(changes,observer){
+        changes.forEach(change => {
+            if(change.intersectionRatio > 0.9){
+                change.target.classList.add('fadeIn');
+                observer.unobserve(change.target)
+            }
+        })
+    }
+
     testFunc(){
         console.log('test from testFunc')
     }
