@@ -4,8 +4,8 @@ class FontClass{
             fonts:[],
         };
         this.$fontTest = document.querySelectorAll('.font-display')
-        this.$placeholder = document.querySelector('.rightMain')
-        this.$formButton = document.querySelector('.searchButton')
+        this.$placeholder = document.querySelector('.right-sectionMain')
+        this.$formButton = document.querySelector('.right-section_formButton')
         this.getFontList();
         this.font();
         this.checkForm();
@@ -31,14 +31,14 @@ class FontClass{
         return `
         <link href="https://fonts.googleapis.com/css2?family=${data.google_font}&display=swap" rel="stylesheet">
         <div class="right-wrapper_main animated fadeInRight" style="font-family:${data.font_style}">                
-            <h1 class="right-header">${data.name}</h1>
-            <h4 class="right-subheader">${data.type}</h4>
+            <h1 class="right-sectionMain_header">${data.name}</h1>
+            <h4 class="right-sectionMain_subheader">${data.type}</h4>
             <p class="right-content">${data.content}</p>
         </div>
-        <div class="right-wraper_detail animated fadeInRight">                
-            <div class="right-detail"><span class="right-detail-intro">YEAR RELEASED</span> ${data.year_released}</div>
-            <div class="right-detail"><span class="right-detail-intro">DESIGNED BY</span> ${data.disigned_by}</div>
-            <div class="right-detail"><span class="right-detail-intro">INSPIRED BY</span> ${data.inspired_by}</div>
+        <div class="right-sectionMain_wraperDetail animated fadeInRight">                
+            <div class="right-sectionMain_wraperDetail-detail"><span class="right-sectionMain_wraperDetail-intro">YEAR RELEASED</span> ${data.year_released}</div>
+            <div class="right-sectionMain_wraperDetail-detail"><span class="right-sectionMain_wraperDetail-intro">DESIGNED BY</span> ${data.disigned_by}</div>
+            <div class="right-sectionMain_wraperDetail-detail"><span class="right-sectionMain_wraperDetail-intro">INSPIRED BY</span> ${data.inspired_by}</div>
         </div>
         `
 
@@ -51,7 +51,7 @@ class FontClass{
         this.$fontTest.forEach(function(value){
 
             value.addEventListener('click',function(){
-                let test = document.querySelector('.rightMain');
+                let test = document.querySelector('.right-sectionMain');
                 test.innerHTML = createTemplate(testdata.fonts[this.dataset.font - 1])
             })
 
@@ -63,13 +63,13 @@ class FontClass{
 
         this.$formButton.addEventListener('click',function(){
 
-            let inputSearch = document.querySelector('.searchField');
+            let inputSearch = document.querySelector('.right-section_formField');
             let errorMsg = document.querySelector('.msg-error')
             var match = false;
 
             testdata.fonts.map(value => {
                 if(value.name === inputSearch.value.capitalize()){
-                    let test = document.querySelector('.rightMain');
+                    let test = document.querySelector('.right-sectionMain');
                     test.innerHTML = createTemplate(value)
                     inputSearch.value = ''
                     match = true
